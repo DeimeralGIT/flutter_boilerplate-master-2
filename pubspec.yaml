@@ -37,7 +37,7 @@ dependencies:
   # This plugin allows Flutter apps to discover network
   # connectivity and configure themselves accordingly.
   # It can distinguish between cellular vs WiFi connection.
-  connectivity_plus: ^4.0.1
+  connectivity_plus: ^6.0.3
 
   # Simple direct Service Locator that allows to decouple the interface
   # from a concrete implementation and to access the concrete
@@ -77,7 +77,7 @@ dependencies:
 
   # RxDart is an implementation of the popular reactiveX api for asynchronous programming,
   # leveraging the native Dart Streams api.
-  rxdart: ^0.27.7
+  rxdart: ^0.28.0
 
   # Flutter plugin for launching a URL. Supports web, phone, SMS, and email schemes.
   url_launcher: ^6.1.12
