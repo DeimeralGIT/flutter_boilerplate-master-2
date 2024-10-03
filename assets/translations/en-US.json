@@ -12,5 +12,10 @@
         "phoneNumber": "Looks like the number you entered is not valid.\nPlease check the number and try again.",
         "invalidSmsCode": "Looks like something went wrong, please check the verification code and try again.",
         "emailExists": "Email already exist"
+    },
+    "dashboard_page": {
+        "LandingSummaryRoute": "Landing summary",
+        "OffersRoute": "Offers",
+        "ProfileRoute": "Profile"
     }
 }

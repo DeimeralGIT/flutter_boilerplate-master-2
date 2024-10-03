@@ -54,7 +54,8 @@ class DioConnectivityRequestRetrier {
 
     streamSubscription = connectivity.onConnectivityChanged.listen(
       (connectivityResult) async {
-        if (connectivityResult != ConnectivityResult.none) {
+        if (connectivityResult != [ConnectivityResult.none] &&
+            connectivityResult.isNotEmpty) {
           unawaited(streamSubscription.cancel());
           // Complete the completer instead of returning
 

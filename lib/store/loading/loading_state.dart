@@ -2,7 +2,7 @@ part of 'loading_cubit.dart';
 
 abstract class LoadingState {}
 
-class LoadingInitialSatte extends LoadingState {}
+class LoadingInitialState extends LoadingState {}
 
 class LoadingStartedState extends LoadingState {}
 

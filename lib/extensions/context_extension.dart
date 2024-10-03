@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../themes/app_colors.dart';
-import '../utils/color_utils.dart';
 
 extension BuildContextExtensions on BuildContext {
   ThemeData get theme => Theme.of(this);
@@ -56,7 +55,7 @@ extension ThemeDataHelper on ThemeData {
 extension ElevatedButtonHelper on ButtonStyle {
   ButtonStyle buttonColor(Color color) => copyWith(
         shadowColor: MaterialStateProperty.all(color),
-        foregroundColor: MaterialStateProperty.all(AppColors.white),
+        foregroundColor: MaterialStateProperty.all(AppColors.monoColor1),
         backgroundColor: MaterialStateProperty.resolveWith(
           (states) {
             return states.contains(MaterialState.disabled)
@@ -105,51 +104,6 @@ extension ElevatedButtonHelper on ButtonStyle {
       ),
     );
   }
-}
-
-// usage example: context.h3.regular.white
-extension TextStyleHelpers on TextStyle {
-  TextStyle get white => copyWith(color: AppColors.white);
-
-  TextStyle get yellow => copyWith(color: AppColors.yellow);
-
-  TextStyle get darkGray => copyWith(color: AppColors.darkGray);
-
-  TextStyle get mediumGray => copyWith(color: AppColors.grayMedium);
-
-  TextStyle get charcoal => copyWith(color: AppColors.charcoal);
-
-  TextStyle get red => copyWith(color: AppColors.red);
-
-  TextStyle get chalkboardBlack => copyWith(color: AppColors.chalkboardBlack);
-
-  TextStyle get burgundy => copyWith(color: AppColors.burgundy);
-
-  TextStyle get lightGray => copyWith(color: AppColors.lightGray);
-
-  TextStyle get error => copyWith(color: AppColors.error);
-
-  TextStyle dynamic({
-    Color lightColor = AppColors.grayMedium,
-    Color darkColor = AppColors.darkGray,
-    bool invertColor = false,
-  }) {
-    return copyWith(
-      color: brightnessColor(
-        lightColor: lightColor,
-        darkColor: darkColor,
-        invert: invertColor,
-      ),
-    );
-  }
-
-  TextStyle size([double? fontSize]) => copyWith(fontSize: fontSize);
-
-  TextStyle get regular => copyWith(fontWeight: FontWeight.normal);
-
-  TextStyle get medium => copyWith(fontWeight: FontWeight.w500);
-
-  TextStyle get bold => copyWith(fontWeight: FontWeight.w700);
 }
 
 extension GlobalKeyEx on GlobalKey {

@@ -1,5 +1,4 @@
-name: flutter_boilerplate
-description: A boilerplate project created in flutter using MobX.
+name: usta
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -42,7 +41,7 @@ dependencies:
   # Simple direct Service Locator that allows to decouple the interface
   # from a concrete implementation and to access the concrete
   # implementation from everywhere in your App
-  get_it: ^7.6.0
+  get_it: ^8.0.0
 
   # Classes and helper functions that support JSON code generation
   # via the `json_serializable` package.
@@ -88,6 +87,11 @@ dependencies:
   # A dart package that helps implement the BLoC pattern.
   bloc: ^8.1.2
 
+  # extra packages ###################################
+
+  # indicator under dashboard pageView
+  smooth_page_indicator: ^1.2.0+3
+
 # Dependencies that are only needed in the development phase
 # of the package itself are listed under dev_dependencies.
 dev_dependencies:
@@ -127,6 +131,7 @@ flutter:
 
   assets:
     - assets/translations/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

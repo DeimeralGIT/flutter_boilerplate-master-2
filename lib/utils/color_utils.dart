@@ -39,8 +39,8 @@ Color blackOrWhiteContrastColor(
 }
 
 Color brightnessColor({
-  Color lightColor = AppColors.white,
-  Color darkColor = AppColors.darkGray,
+  Color lightColor = AppColors.monoColor1,
+  Color darkColor = AppColors.monoColor2,
   bool invert = false,
 }) {
   var isDarkMode = router.navigatorKey.currentContext!.isDarkMode;

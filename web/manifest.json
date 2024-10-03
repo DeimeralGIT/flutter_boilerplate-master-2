@@ -1,11 +1,10 @@
 {
-    "name": "flutter_boilerplate",
-    "short_name": "flutter_boilerplate",
+    "name": "usta",
+    "short_name": "usta",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A boilerplate project created in flutter using MobX.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

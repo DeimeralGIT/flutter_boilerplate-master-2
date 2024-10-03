@@ -1,72 +1,35 @@
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
-import 'app_fonts.dart';
 
-const BoxDecoration splashScreenGradient = BoxDecoration(
-  gradient: LinearGradient(
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-    colors: [
-      Color(0xFFFEAE1C),
-      Color(0xFFFF9921),
-      Color(0xFFFF9921),
-      Color(0xFFFEAE1C),
-    ],
-  ),
+const TextStyle buttonTextStyle = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 23,
 );
 
-final ButtonStyle flatButtonStyle = TextButton.styleFrom(
-  minimumSize: const Size(88, 36),
-  padding: const EdgeInsets.all(16),
+const TextStyle titleTextStyle = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 20,
+  color: AppColors.brandColor3,
+);
+
+final ButtonStyle filledButton = FilledButton.styleFrom(
+  backgroundColor: AppColors.brandColor1,
+  foregroundColor: AppColors.monoColor1,
+  fixedSize: const Size.fromHeight(60),
   shape: const RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(Radius.circular(2)),
+    borderRadius: BorderRadius.all(Radius.circular(15)),
   ),
-  textStyle: const TextStyle(
-    fontFamily: FontFamily.CeraPro,
-    fontWeight: FontWeight.w500,
-  ),
+  textStyle: buttonTextStyle,
 );
 
-final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
-  backgroundColor: AppColors.red,
-  minimumSize: const Size(88, 36),
-  padding: const EdgeInsets.all(16),
+final ButtonStyle outlinedButton = OutlinedButton.styleFrom(
+  fixedSize: const Size.fromHeight(60),
   shape: const RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(Radius.circular(2)),
+    borderRadius: BorderRadius.all(Radius.circular(10)),
+    side: BorderSide(color: AppColors.brandColor1),
   ),
-  textStyle: const TextStyle(
-    fontFamily: FontFamily.CeraPro,
-    fontWeight: FontWeight.w500,
-    color: AppColors.white,
-  ),
+  backgroundColor: AppColors.monoColor1,
+  foregroundColor: AppColors.brandColor1,
+  textStyle: buttonTextStyle,
 );
-
-final ButtonStyle outlineButtonStyle = OutlinedButton.styleFrom(
-  minimumSize: const Size(88, 36),
-  padding: const EdgeInsets.all(16),
-  shape: const RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(Radius.circular(2)),
-  ),
-  textStyle: const TextStyle(
-    fontFamily: FontFamily.CeraPro,
-    fontWeight: FontWeight.w500,
-  ),
-).copyWith(
-  side: MaterialStateProperty.resolveWith<BorderSide>(
-    (states) {
-      if (states.contains(MaterialState.pressed)) {
-        return const BorderSide(color: AppColors.red);
-      }
-      return const BorderSide();
-    },
-  ),
-);
-
-const TextStyle pinThemeTextStyle = TextStyle(
-  color: AppColors.charcoal,
-  fontSize: 27,
-  fontFamily: FontFamily.CeraPro,
-);
-
-final BorderRadius textFieldBorder = BorderRadius.circular(20);

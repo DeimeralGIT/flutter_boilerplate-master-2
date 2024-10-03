@@ -15,16 +15,34 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    DashboardRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const DashboardPage(),
+      );
+    },
+    LandingSummaryRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const LandingSummaryPage(),
+      );
+    },
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const LoginPage(),
       );
     },
-    DashboardRoute.name: (routeData) {
+    OffersRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const DashboardPage(),
+        child: const OffersPage(),
+      );
+    },
+    ProfileRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProfilePage(),
       );
     },
     SplashRoute.name: (routeData) {
@@ -34,6 +52,34 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [DashboardPage]
+class DashboardRoute extends PageRouteInfo<void> {
+  const DashboardRoute({List<PageRouteInfo>? children})
+      : super(
+          DashboardRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DashboardRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [LandingSummaryPage]
+class LandingSummaryRoute extends PageRouteInfo<void> {
+  const LandingSummaryRoute({List<PageRouteInfo>? children})
+      : super(
+          LandingSummaryRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LandingSummaryRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -51,15 +97,29 @@ class LoginRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [DashboardPage]
-class DashboardRoute extends PageRouteInfo<void> {
-  const DashboardRoute({List<PageRouteInfo>? children})
+/// [OffersPage]
+class OffersRoute extends PageRouteInfo<void> {
+  const OffersRoute({List<PageRouteInfo>? children})
       : super(
-          DashboardRoute.name,
+          OffersRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'DashboardRoute';
+  static const String name = 'OffersRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProfilePage]
+class ProfileRoute extends PageRouteInfo<void> {
+  const ProfileRoute({List<PageRouteInfo>? children})
+      : super(
+          ProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProfileRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -4,7 +4,6 @@ import 'package:get_it/get_it.dart';
 
 import 'providers/flavor_service.dart';
 import 'providers/screen_service.dart';
-import 'themes/dark_theme.dart';
 import 'themes/light_theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         debugShowCheckedModeBanner: GetIt.I<FlavorService>().isDevelopment,
         theme: lightTheme,
-        darkTheme: darkTheme,
+        // darkTheme: darkTheme,
         routerConfig: router.config(),
       ),
     );
